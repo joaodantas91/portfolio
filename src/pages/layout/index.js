@@ -1,38 +1,50 @@
 import React from 'react';
-import Layout from './styles.js';
+import Container from './styles.js';
 import Navbar from '../../components/navbar';
+import Home from '../../components/home';
+import Projects from '../../components/projects';
+import { TransitionGroup, CSSTransition} from 'react-transition-group'
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route, 
-  Link
+  Route
 } from "react-router-dom";
 
-function App() {
+function Layout() {
   return (
-    <Layout>
-      <Router basename="/portfolio" >
+    <Container>
+      <Router basename="/portfolio">
         <Navbar />
-        <Switch>
-          <Route path="/">
-            <h1>
-              <span>João</span> 
-              <span>Dantas</span>
-            </h1> 
-          </Route>
-          <Route path="/teste">
-            <h1>
-              <span>teste</span> 
-              <span>a</span>
-            </h1> 
-          </Route>
-        </Switch>
+        <Route render={({location})=> (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={450}
+              classNames="fade"
+            >
+
+              <Switch location={location}>
+                <Route exact path="/">
+                  <Home nome="João"/>
+                </Route>
+
+                <Route exact path="/teste">
+                  <Home nome="teste"/>
+                </Route>
+
+                <Route exact path="/projects" component={Projects} />
+              </Switch>
+
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
+        
         
       </Router>
       
-    </Layout>
+    </Container>
   );
 }
 
-export default App;
+export default Layout;

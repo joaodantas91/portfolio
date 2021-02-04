@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
-const Layout = styled.div`
+export const Container = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #535557;
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: calc(100vw - 80px);
+  margin-left: 80px;
   h1 {
     color: #fff;
     font-size: 80px;
@@ -17,6 +19,21 @@ const Layout = styled.div`
       margin-left: 70px;
     }
   }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 450ms ease-in;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
 `;
 
-export default Layout;
+export default Container;

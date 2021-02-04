@@ -16,6 +16,11 @@ export const Navbar = styled.nav`
     text-decoration: none;
     width: fit-content;
   }
+  .active {
+    &>div {
+      animation-name: shadowInset;
+    }
+  }
 `; 
 
 export const Button = styled.div`
@@ -31,6 +36,42 @@ export const Button = styled.div`
   border-radius: 8px;
   border-radius: 8px;
   background: #333333;
-  box-shadow: 6px 6px 12px #2b2b2b,
-              -6px -6px 12px #3b3b3b;
+  box-shadow: 6px 6px 12px #2b2b2b, -6px -6px 12px #3b3b3b;
+  animation-fill-mode: forwards;
+  animation-duration: .4s;
+  animation-iteration-count: 1;
+
+  
+  
+  @keyframes shadowInset {
+    0% {
+      box-shadow: 6px 6px 12px #2b2b2b, -6px -6px 12px #3b3b3b;     
+    }
+
+    50% {
+      box-shadow: 0px 0px 0px #2b2b2b, 0px 0px 0px #3b3b3b;
+    }
+
+    51% {
+      box-shadow: inset 0px 0px 0px #2b2b2b, inset 0px 0px 0px #3b3b3b;
+    }
+
+    100% {
+      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b;
+    }
+  }
+
+  @keyframes shadowOuter {
+    0% {
+      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b;
+    }
+
+    50% {
+      box-shadow: none, none;
+    }
+
+    100% {
+      box-shadow: 6px 6px 12px #2b2b2b, -6px -6px 12px #3b3b3b;
+    }
+  }
 `; 
