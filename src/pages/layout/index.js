@@ -1,12 +1,14 @@
 import React from 'react';
 import Container from './styles.js';
 import Navbar from '../../components/navbar';
+import Home from '../../components/home';
+import Projects from '../../components/projects';
+import { TransitionGroup, CSSTransition} from 'react-transition-group'
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route, 
-  Link
+  Route
 } from "react-router-dom";
 
 function Layout() {
@@ -14,26 +16,30 @@ function Layout() {
     <Container>
       <Router basename="/portfolio">
         <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <h1>
-              <span>João</span> 
-              <span>Dantas</span>
-            </h1> 
-          </Route>
-          <Route exact path="/teste">
-            <h1>
-              <span>Jamer</span> 
-              <span>Moraes</span>
-            </h1> 
-          </Route>
-          <Route exact path="/projects">
-            <h1>
-              <span>Jamer</span> 
-              <span>Moraes</span>
-            </h1> 
-          </Route>
-        </Switch>
+        <Route render={({location})=> (
+          <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={450}
+              classNames="fade"
+            >
+
+              <Switch location={location}>
+                <Route exact path="/">
+                  <Home nome="João"/>
+                </Route>
+
+                <Route exact path="/teste">
+                  <Home nome="teste"/>
+                </Route>
+
+                <Route exact path="/projects" component={Projects} />
+              </Switch>
+
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
+        
         
       </Router>
       
