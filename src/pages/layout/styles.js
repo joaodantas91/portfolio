@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Layout = styled.div`
+const Container = styled.div`
   background-color: #535557;
   height: 100vh;
   width: 100vw;
@@ -19,4 +19,4 @@ const Layout = styled.div`
   }
 `;
 
-export default Layout;
+export default Container;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './styles.js';
+import Container from './styles.js';
 import Navbar from '../../components/navbar';
 
 import {
@@ -9,10 +9,10 @@ import {
   Link
 } from "react-router-dom";
 
-function App() {
+function Layout() {
   return (
-    <Layout>
-      <Router>
+    <Container>
+      <Router basename="/portfolio">
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -27,12 +27,18 @@ function App() {
               <span>Moraes</span>
             </h1> 
           </Route>
+          <Route exact path="/projects">
+            <h1>
+              <span>Jamer</span> 
+              <span>Moraes</span>
+            </h1> 
+          </Route>
         </Switch>
         
       </Router>
       
-    </Layout>
+    </Container>
   );
 }
 
-export default App;
+export default Layout;
