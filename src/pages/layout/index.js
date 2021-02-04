@@ -12,19 +12,19 @@ import {
 function App() {
   return (
     <Layout>
-      <Router>
+      <Router basename="/portfolio" >
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route path="/">
             <h1>
               <span>João</span> 
               <span>Dantas</span>
             </h1> 
           </Route>
-          <Route exact path="/teste">
+          <Route path="/teste">
             <h1>
-              <span>Jamer</span> 
-              <span>Moraes</span>
+              <span>teste</span> 
+              <span>a</span>
             </h1> 
           </Route>
         </Switch>
