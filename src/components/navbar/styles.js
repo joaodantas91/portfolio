@@ -1,4 +1,11 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
+// export const CustomNavLink = styled(NavLink)`
+//   ${({isActive)=>{
+    
+//   }}
+// `;
 
 export const Navbar = styled.nav`
   position: fixed;
@@ -12,6 +19,12 @@ export const Navbar = styled.nav`
   height: 100vh;
   width: 80px;
   box-shadow: 0 6px 12px #2b2b2b;
+  ${({before})=>`#a${before}`} {
+    &>div {
+      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b;
+      animation-name: shadowOuter;
+    }
+  }
   a {
     text-decoration: none;
     width: fit-content;
@@ -40,8 +53,6 @@ export const Button = styled.div`
   animation-fill-mode: forwards;
   animation-duration: .4s;
   animation-iteration-count: 1;
-
-  
   
   @keyframes shadowInset {
     0% {
@@ -67,7 +78,11 @@ export const Button = styled.div`
     }
 
     50% {
-      box-shadow: none, none;
+      box-shadow: inset 0px 0px 0px #2b2b2b, inset 0px 0px 0px #3b3b3b;
+    }
+
+    51% {
+      box-shadow: 0px 0px 0px #2b2b2b, 0px 0px 0px #3b3b3b;
     }
 
     100% {
