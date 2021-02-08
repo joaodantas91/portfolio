@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 function Home(props) {
 
-  const location = useLocation();
+  // const location = useLocation();
   // useEffect(() => {
   //   console.log(location.pathname);
   // });

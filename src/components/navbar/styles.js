@@ -1,5 +1,5 @@
-import styled, {css} from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+//import { NavLink } from 'react-router-dom';
 
 // export const CustomNavLink = styled(NavLink)`
 //   ${({isActive)=>{
@@ -19,21 +19,31 @@ export const Navbar = styled.nav`
   height: 100vh;
   width: 80px;
   box-shadow: 0 6px 12px #2b2b2b;
-  ${({before})=>`#a${before}`} {
-    &>div {
-      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b;
-      animation-name: shadowOuter;
+  .active {
+    &>div { //Navbar Button
+      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b; 
+      animation-play-state: paused;
     }
   }
+  
   a {
     text-decoration: none;
     width: fit-content;
   }
-  .active {
-    &>div {
-      animation-name: shadowInset;
+  ${({teste, current})=>`#a${teste}`} {
+    &>div { //Navbar Button
+      box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b; 
+      animation-name: shadowOuter;
+      animation-play-state:running;
     }
   }
+  ${({teste, current})=>`#a${current}`}.active {
+    &>div { //Navbar Button
+      animation-name: shadowInset;
+      animation-play-state:running;
+    }
+  }
+
 `; 
 
 export const Button = styled.div`

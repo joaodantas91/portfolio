@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from './styles.js';
-import Navbar from '../../components/navbar';
-import Home from '../../components/home';
-import Projects from '../../components/projects';
+import Navbar from '../../components/Navbar';
+import Home from '../../components/Home';
+import Projects from '../../components/Projects';
 import { TransitionGroup, CSSTransition} from 'react-transition-group'
 
 import {
@@ -33,7 +33,9 @@ function Layout() {
                   <Home nome="teste"/>
                 </Route>
 
-                <Route exact path="/projects" component={Projects} />
+                <Route exact path="/projects" >
+                  <Projects />
+                </Route>
               </Switch>
 
             </CSSTransition>
