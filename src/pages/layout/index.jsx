@@ -1,15 +1,16 @@
 import React from 'react';
-import Container from './styles.js';
-import Navbar from '../../components/Navbar';
-import Home from '../../components/Home';
-import Projects from '../../components/Projects';
-import { TransitionGroup, CSSTransition} from 'react-transition-group'
-
+import { TransitionGroup, CSSTransition} from 'react-transition-group';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
+import Container from './styles';
+import Navbar from '../../components/Navbar';
+import Home from '../Home';
+import Techs from '../Techs'
+import Projects from '../Projects';
 
 function Layout() {
   return (
@@ -26,11 +27,11 @@ function Layout() {
 
               <Switch location={location}>
                 <Route exact path="/">
-                  <Home nome="João"/>
+                  <Home/>
                 </Route>
 
                 <Route exact path="/teste">
-                  <Home nome="teste"/>
+                  <Techs/>
                 </Route>
 
                 <Route exact path="/projects" >
