@@ -9,16 +9,6 @@ export const Container = styled.div`
   height: 100vh;
   width: calc(100vw - 80px);
   margin-left: 80px;
-  h1 {
-    color: #fff;
-    font-size: 80px;
-    line-height: 0.9em;
-    display: flex;
-    flex-direction: column;
-    span:last-child {
-      margin-left: 70px;
-    }
-  }
 
   .fade-enter {
     opacity: 0;
