@@ -12,23 +12,27 @@ export const Wrapper = styled.div`
     font-size: 50px;
     font-weight: 600;
     line-height: .9;
+    margin-bottom: 40px;
   }
 
   .techs {
     display: flex;
     flex-wrap: wrap;
-    .tech {
-      padding: 5px;
-      border: 1px solid #fff;
-      border-radius: 5px;
-      width: 70px;
-      height: 70px;
+    margin: 0 auto;
+    width: 500px;
 
+    .tech {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33.33%;
+      height: 100px;
+      margin-bottom: 20px;
       img {
-        object-fit: cover;
-        object-position: center;
-        height: 100%;
-        width: 100%;
+        height: auto;
+        width: auto;
+        max-height: 90%;
+        max-width: 100%;
       }
     }
   }

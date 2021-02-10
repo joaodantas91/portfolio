@@ -1,8 +1,8 @@
 const images = [
   { src: '/img/techs/css.svg', alt: 'css' },
   { src: '/img/techs/html.svg', alt: 'html' },
-  { src: '/img/techs/jquery.png', alt: 'jquery' },
   { src: '/img/techs/js.svg', alt: 'js' },
+  { src: '/img/techs/jquery.svg', alt: 'jquery' },
   { src: '/img/techs/react.svg', alt: 'react' },
   { src: '/img/techs/sass.svg', alt: 'sass' },
 ];
