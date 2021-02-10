@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Wrapper from './styles';
 import Container from '../../components/Container/styles'
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -6,8 +6,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function Home(props) {
 
+  const containerRef = useRef();
+
   return (
-    <Container>
+    <Container ref={containerRef}>
+      
       <Wrapper>
 
         <div className="profile">
@@ -43,5 +46,6 @@ function Home(props) {
     </Container>
   )
 }
+
 
 export default Home;

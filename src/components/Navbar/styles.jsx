@@ -19,6 +19,7 @@ export const Navbar = styled.nav`
   height: 100vh;
   width: 80px;
   box-shadow: 0 6px 12px #2b2b2b;
+  z-index: 9;
   .active {
     &>div { //Navbar Button
       box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b; 

@@ -6,9 +6,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #535557;
-  height: 100vh;
-  width: calc(100vw - 80px);
-  margin-left: 80px;
+  min-height: 100vh;
+  height: fit-content;
+  width: calc(100vw - ${window.scrollY > 0? 65:80}px);
+  margin-left: auto;
 
   .fade-enter {
     opacity: 0;
@@ -25,5 +26,7 @@ export const Container = styled.div`
     transition: opacity 300ms ease-in;
   }
 `;
+
+
 
 export default Container;

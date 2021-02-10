@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 100%;
+  flex: 1;
   padding: 25px 10px;
 
   h2 {
@@ -18,8 +18,11 @@ export const Wrapper = styled.div`
   .techs {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 500px;
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     .tech {
       display: flex;

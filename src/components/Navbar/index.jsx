@@ -19,8 +19,6 @@ class LeftNavbar extends React.Component {
   }  
 
   componentDidMount() {
-    console.log(this.references);
-    console.log(this.boxRef);
     if ( this.state.current !== this.state.before ) {
       // teve mundança
       this.setState({teste: this.state.before});
