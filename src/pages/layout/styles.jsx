@@ -8,7 +8,7 @@ export const Container = styled.div`
   background-color: #535557;
   min-height: 100vh;
   height: fit-content;
-  width: calc(100vw - ${window.scrollY > 0? 65:80}px);
+  width: calc(100vw - 80px);
   margin-left: auto;
 
   .fade-enter {

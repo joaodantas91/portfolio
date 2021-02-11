@@ -8,9 +8,7 @@ const Container = styled.div`
   justify-content: center;
   position: absolute;
   background-color: #535557;
-  ${(props)=> {
-    console.log(props.ref);
-  }}
+  width: 100%;
   height: fit-content;
   top: 0;
   right: 0;

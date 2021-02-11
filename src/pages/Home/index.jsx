@@ -1,15 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Wrapper from './styles';
 import Container from '../../components/Container/styles'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 function Home(props) {
+  const [ hasScroll, setHasScroll] = useState();
+  useEffect(()=> {
+    setHasScroll(document.body.scrollHeight > document.body.clientHeight);
+  }, [hasScroll]);
 
-  const containerRef = useRef();
 
   return (
-    <Container ref={containerRef}>
+    <Container hasScroll={false}>
       
       <Wrapper>
 

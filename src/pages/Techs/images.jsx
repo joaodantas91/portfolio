@@ -17,15 +17,15 @@ const images = {
 };
 
 let imagesWithId = {};
-let index = 0;
+let imgIndex = 0;
 
 for (const key in images) {
   imagesWithId[key] = images[key].map((e)=>{
     let image = {
       ...e,
-      id: `img-${index}`
+      id: `img-${imgIndex}`
     }
-    index ++
+    imgIndex ++
     return image;
   })
 }
