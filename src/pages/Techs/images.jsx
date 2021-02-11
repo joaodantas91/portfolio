@@ -16,11 +16,10 @@ const images = {
   ]
 };
 
-let imagesWithId = {};
 let imgIndex = 0;
 
-for (const key in images) {
-  imagesWithId[key] = images[key].map((e)=>{
+Object.keys(images).map((key)=> 
+  images[key] = images[key].map((e)=> {
     let image = {
       ...e,
       id: `img-${imgIndex}`
@@ -28,5 +27,5 @@ for (const key in images) {
     imgIndex ++
     return image;
   })
-}
-export default imagesWithId;
+)
+export default images;

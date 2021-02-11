@@ -9,7 +9,7 @@ const Container = styled.div`
   position: absolute;
   background-color: #535557;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   top: 0;
   right: 0;
   color: #fff;

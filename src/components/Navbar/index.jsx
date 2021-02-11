@@ -61,7 +61,7 @@ class LeftNavbar extends React.Component {
 
         <NavLink 
           id="a2" 
-          to="/teste" 
+          to="/techs" 
           ref={this.references[1]} 
           activeClassName="active" 
           onClick={()=>this.setState({current: '2', isFirstLoad: false})} 

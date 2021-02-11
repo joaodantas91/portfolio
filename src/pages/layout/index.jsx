@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TransitionGroup, CSSTransition} from 'react-transition-group';
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   HashRouter,
   Switch,
   Route
@@ -27,7 +27,7 @@ function Layout() {
         <Route render={({location})=> (
           <TransitionGroup>
             <CSSTransition
-              key={location.key}
+              key={location.pathname}
               timeout={450}
               classNames="fade"
             >

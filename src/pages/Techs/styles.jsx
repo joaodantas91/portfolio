@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
   .techs {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto 30px;
     width: 500px;
     &:last-child {
@@ -28,7 +29,7 @@ export const Wrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 33.33%;
+      width: 33.334%;
       height: 100px;
       margin-bottom: 20px;
       img {
