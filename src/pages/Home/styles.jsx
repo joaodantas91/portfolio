@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   min-height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 30px 10px;
 
   .title {
     text-align: center;
