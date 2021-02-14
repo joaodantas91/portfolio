@@ -8,11 +8,16 @@ const Container = styled.div`
   justify-content: center;
   position: absolute;
   background-color: #535557;
-  width: 100%;
+  width: calc(100% - 80px);
   height: 100%;
   top: 0;
   right: 0;
   color: #fff;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 80px;
+  }
 `;
 
 

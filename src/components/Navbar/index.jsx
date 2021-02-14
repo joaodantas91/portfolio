@@ -1,7 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
-import {Navbar, Button} from './styles';
+import {Navbar, Button, StyledLink} from './styles';
 import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import WebIcon from '@material-ui/icons/Web';
@@ -46,7 +45,7 @@ class LeftNavbar extends React.Component {
       
       <Navbar teste={this.state.isFirstLoad ? '' : this.state.teste} current={this.state.isFirstLoad ? '' : this.state.current}>
 
-        <NavLink 
+        <StyledLink 
           id="a1" 
           to="/" 
           ref={this.references[0]} 
@@ -57,9 +56,9 @@ class LeftNavbar extends React.Component {
           <Button>
             <HomeIcon />
           </Button>
-        </NavLink>
+        </StyledLink>
 
-        <NavLink 
+        <StyledLink 
           id="a2" 
           to="/techs" 
           ref={this.references[1]} 
@@ -69,9 +68,9 @@ class LeftNavbar extends React.Component {
           <Button>
             <CodeIcon />
           </Button>
-        </NavLink>
+        </StyledLink>
 
-        <NavLink 
+        <StyledLink 
           id="a3" 
           to="/projects" 
           ref={this.references[2]}
@@ -81,7 +80,7 @@ class LeftNavbar extends React.Component {
           <Button>
             <WebIcon />
           </Button>
-        </NavLink>
+        </StyledLink>
 
       </Navbar>
     );

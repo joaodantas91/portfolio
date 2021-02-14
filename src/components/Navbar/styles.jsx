@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-//import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-// export const CustomNavLink = styled(NavLink)`
-//   ${({isActive)=>{
-    
-//   }}
-// `;
+export const StyledLink = styled(NavLink)`
+  margin: 15px 0;
+  @media (max-width: 768px) {
+    margin: 0 15px;
+  }
+`;
 
 export const Navbar = styled.nav`
   position: fixed;
@@ -44,7 +45,13 @@ export const Navbar = styled.nav`
       animation-play-state:running;
     }
   }
-
+  @media (max-width: 768px) {
+    flex-direction: row;
+    top: auto;
+    bottom: 0;
+    height: 80px;
+    width: 100vw;
+  }
 `; 
 
 export const Button = styled.div`
@@ -55,7 +62,6 @@ export const Button = styled.div`
   height: 45px;
   width: 45px;
   border-radius: 8px;
-  margin: 15px 0;
   border-radius: 8px;
   border-radius: 8px;
   border-radius: 8px;
