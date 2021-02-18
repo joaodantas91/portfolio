@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     .frame {
+      backface-visibility: hidden;
       height: fit-content;
       display: flex;
       flex-direction: column;
@@ -27,7 +28,13 @@ export const Wrapper = styled.div`
       margin: 0 20px;
       margin-bottom: 20px;
       box-shadow: 0 0px 6px rgba(0,0,0,.2);
-      
+      transition: all .2s;
+      &:hover { 
+        transform: scale(1.04)
+      }
+      img {
+        backface-visibility: hidden;
+      }
       .frame-img {
         width: 130px;
         max-width: 100%;
