@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 1110px;
   max-width: 100%;
   margin: 0 auto;
@@ -43,7 +46,11 @@ export const Wrapper = styled.div`
       }
     }
   }
-
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 35px;
+    }
+  }
   @media (max-width: 576px) {
     .frames {
       .frame {

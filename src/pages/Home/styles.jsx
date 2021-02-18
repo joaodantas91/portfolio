@@ -66,6 +66,20 @@ const Wrapper = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    .profile {
+      width: 130px;
+      height: 130px;
+    }
+    .title {
+      h1 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
 `;
 
 export default Wrapper;
