@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { TransitionGroup, CSSTransition} from 'react-transition-group';
 import {
   // BrowserRouter as Router,
@@ -15,13 +15,8 @@ import Projects from '../Projects';
 
 function Layout() {
 
-  const [ hasScroll, setHasScroll] = useState();
-  useEffect(()=> {
-    setHasScroll(document.body.scrollHeight > document.body.clientHeight);
-  }, [hasScroll]);
-
   return (
-    <Container hasScroll={hasScroll}>
+    <Container>
       <HashRouter hashType="slash">
         <Navbar />
         <Route render={({location})=> (

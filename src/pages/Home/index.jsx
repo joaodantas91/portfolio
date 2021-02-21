@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import { Scrollbars } from 'react-custom-scrollbars';
@@ -7,14 +7,9 @@ import Wrapper from './styles';
 import Container from '../../components/Container/styles'
 
 function Home(props) {
-  const [ hasScroll, setHasScroll] = useState();
-  useEffect(()=> {
-    setHasScroll(document.body.scrollHeight > document.body.clientHeight);
-  }, [hasScroll]);
-
 
   return (
-    <Container hasScroll={false}>
+    <Container>
       <Scrollbars>
         <Wrapper>
 

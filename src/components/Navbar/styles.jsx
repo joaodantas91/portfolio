@@ -32,14 +32,14 @@ export const Navbar = styled.nav`
     text-decoration: none;
     width: fit-content;
   }
-  ${({teste, current})=>`#a${teste}`} {
+  ${({beforeItem, currentItem})=>`#a${beforeItem}`} {
     &>div { //Navbar Button
       box-shadow: inset 6px 6px 12px #2b2b2b, inset -6px -6px 12px #3b3b3b; 
       animation-name: shadowOuter;
       animation-play-state:running;
     }
   }
-  ${({teste, current})=>`#a${current}`}.active {
+  ${({beforeItem, currentItem})=>`#a${currentItem}`}.active {
     &>div { //Navbar Button
       animation-name: shadowInset;
       animation-play-state:running;

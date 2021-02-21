@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 import Container from '../../components/Container/styles';
@@ -6,13 +6,9 @@ import { Wrapper } from './styles';
 import images from './images';
 
 const Techs = function() {
-  const [ hasScroll, setHasScroll] = useState();
-  useEffect(()=> {
-    setHasScroll(document.body.scrollHeight > document.body.clientHeight);
-  }, [hasScroll]);
   
   return (
-    <Container hasScroll={hasScroll}>
+    <Container>
       <Scrollbars style={{ width: '100%', height: '100vh' }}>
         <Wrapper>
           <h2>Minha stack</h2>
