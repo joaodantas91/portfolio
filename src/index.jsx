@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Layout from './pages/layout';
+import React from "react";
+import { App } from "./app";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Layout />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { createRoot } from "react-dom/client";
+
+const container = document.getElementById("root");
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<App />);
