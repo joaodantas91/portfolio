@@ -7,8 +7,12 @@ import { motion } from "framer-motion";
 // Frame
 import Chrome from "./img/chrome.svg";
 
-function Projects() {
+function Projects () {
   const projects = [
+    {
+      href: "http://alubar2020.sitebeta.com.br/",
+      src: process.env.PUBLIC_URL + "/img/projects/alubar.png",
+    },
     {
       href: "http://alubar2020.sitebeta.com.br/",
       src: process.env.PUBLIC_URL + "/img/projects/alubar.png",
