@@ -10,19 +10,39 @@ import Chrome from "./img/chrome.svg";
 function Projects () {
   const projects = [
     {
-      href: "http://alubar2020.sitebeta.com.br/",
-      src: process.env.PUBLIC_URL + "/img/projects/alubar.png",
+      href: "https://investors.thecignagroup.com/overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/cigna.png",
     },
     {
-      href: "http://alubar2020.sitebeta.com.br/",
-      src: process.env.PUBLIC_URL + "/img/projects/alubar.png",
+      href: "https://ir.cardinalhealth.com/overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/cardinal-health.png",
+    },
+    {
+      href: "https://investor.townebank.com/overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/towne-bank.png",
+    },
+    {
+      href: "https://www.redemagic.com/cases/3m-littmann-club/",
+      src: process.env.PUBLIC_URL + "/img/projects/littmann.png",
+    },
+    {
+      href: "https://www.redemagic.com/cases/tenda-ta-no-tenda-ta-na-mao/",
+      src: process.env.PUBLIC_URL + "/img/projects/tenda.png",
+    },
+    {
+      href: "https://www.redemagic.com/cases/banrisul-eu-acredito/",
+      src: process.env.PUBLIC_URL + "/img/projects/banrisul.png",
+    },
+    {
+      href: "https://blog.ceabs.com.br/",
+      src: process.env.PUBLIC_URL + "/img/projects/ceabs.png",
     },
     {
       href: "http://www.portodiassaude.com.br/",
       src: process.env.PUBLIC_URL + "/img/projects/pds.png",
     },
     {
-      href: "eurolubs.sitebeta.com.br",
+      href: "https://www.eurolubs.com.br/",
       src: process.env.PUBLIC_URL + "/img/projects/eurolubs.png",
     },
     {
@@ -43,15 +63,11 @@ function Projects () {
     },
     {
       href: "https://www.casacharlotte.com.br/",
-      src: process.env.PUBLIC_URL + "/img/projects/pds.png",
+      src: process.env.PUBLIC_URL + "/img/projects/casa-charlote.png",
     },
     {
-      href: "http://simineral.sitebeta.com.br/simineral-on/24/todos-os-dias-mulheres",
-      src: process.env.PUBLIC_URL + "/img/projects/pds.png",
-    },
-    {
-      href: "http://bioenergia.sitebeta.com.br/",
-      src: process.env.PUBLIC_URL + "/img/projects/pds.png",
+      href: "https://www.belembioenergia.com.br/",
+      src: process.env.PUBLIC_URL + "/img/projects/belembioenergia.png",
     },
   ];
 

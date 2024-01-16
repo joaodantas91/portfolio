@@ -41,28 +41,32 @@ const Wrapper = styled.div`
   }
 
   .description {
-    text-align: center;
     max-width:800px;
-    font-weight: 200;
-    
+    font-weight: 400;
+    font-size: 18px;
     margin-bottom: 20px;
-    p:first-child {
-      text-align: center;
+    p + p {
+      margin-top: 1em;
     }
   }
 
   .links {
     display: flex;
     align-items: center;
+    gap: 18px;
     a {
-      margin: 0 3px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: 400;
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
       svg {
-        height: 35px;
-        width: auto;
+        margin-top: -2px;
+        margin-right: 2px;
         color: #fff;
-        &:first-child {
-          margin-left: -5.5px
-        }
       }
     }
   }

@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1110px;
+  width: 1400px;
   max-width: 100%;
   margin: 0 auto;
   padding: 25px 10px;
@@ -17,21 +17,17 @@ export const Wrapper = styled.div`
     margin-bottom: 40px;
   }
   .frames {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     flex-wrap: wrap;
+    gap: 20px;
     .frame {
       backface-visibility: hidden;
       height: fit-content;
       display: flex;
       flex-direction: column;
-      width: calc(33.334% - 40px);
-      margin: 0 20px;
-      margin-bottom: 20px;
       box-shadow: 0 0px 6px rgba(0,0,0,.2);
       transition: all .2s;
-      &:hover { 
-        transform: scale(1.04)
-      }
       img {
         backface-visibility: hidden;
       }
@@ -43,14 +39,15 @@ export const Wrapper = styled.div`
       .project {
         width: 100%;
         height: auto;
+        object-fit: cover;
+        object-position: center top;
+        aspect-ratio: 16/9;
       }
     }
   }
   @media (max-width: 992px) {
     .frames {
-      .frame {
-        width: calc(50% - 40px);
-      }
+      
     }
   }
   @media (max-width: 768px) {
@@ -60,9 +57,7 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 576px) {
     .frames {
-      .frame {
-        width: calc(100% - 40px);
-      }
+     
     }
   }
 `;

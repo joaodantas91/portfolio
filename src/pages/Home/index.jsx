@@ -1,13 +1,15 @@
 import React from "react";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import EmailIcon from "@material-ui/icons/Email";
+
 import { Scrollbars } from "react-custom-scrollbars";
 
 import Wrapper from "./styles";
 import Container from "../../components/Container/styles";
 import { motion } from "framer-motion";
 
-function Home(props) {
+function Home (props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,38 +29,44 @@ function Home(props) {
 
             <div className="title">
               <h1>João Dantas</h1>
-              <h3>Desenvolvedor Front-end</h3>
+              <h3>Front-end Developer</h3>
             </div>
 
             <div className="description">
-              <p>Olá, seja bem vindo ao meu portifólio.</p>
               <p>
-                Me chamo João Dantas e atualmente moro em Belém/Pa. Meus estudos
-                em desenvolvimento web começaram em fevereiro de 2020. Em agosto
-                de 2020 consegui um estágio, onde pude colocar em prática meus
-                aprendizados e realizar novos projetos, me desafiando a cada
-                dia. Dessa forma, pude melhorar minhas habilidades e ser
-                promovido para desenvolvedor front-end junior na mesma empresa.
-                Nesse processo atuei no desenvolvimento, na manutenção e no
-                aprendizado de resolver problemas reais.
+                Front-end developer with nearly four years of experience. I have a special focus on creating accessible, responsive, and high-performance websites, following industry best practices. I am constantly seeking opportunities to create pixel-perfect websites that provide an exceptional user experience.
+              </p>
+              <p>
+                My technical skills include working with technologies such as React, Next.js, TypeScript, JavaScript and NodeJS. With my knowledge, I am capable of creating complete and efficient solutions. In addition to my technical expertise, I am a dedicated collaborator and passionate about continuous learning and growth. I am adept at working both in collaborative teams and autonomously, always seeking innovative solutions and overcoming challenges.
               </p>
             </div>
 
             <div className="links">
               <a
-                href="https://www.linkedin.com/in/joaodantas91/"
+                href="https://www.linkedin.com/in/joaodantas91/?locale=en_US"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <LinkedInIcon style={{ height: 42 }} />
+                <LinkedInIcon width={18} />
+                /joaodantas91
               </a>
               <a
                 href="https://github.com/joaodantas91"
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <GitHubIcon />
+                <GitHubIcon width={18} />
+                /joaodantas91
               </a>
+              <a
+                href="mailto:joaostadantas@gmail.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <EmailIcon width={18} />
+                joaostadantas@gmail.com
+              </a>
+
             </div>
           </Wrapper>
         </Scrollbars>
