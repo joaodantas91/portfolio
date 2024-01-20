@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import { RoutesComponent } from "./routes";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home";
 
-export function App() {
+export function App () {
   const Container = styled.div`
     position: relative;
     display: flex;
@@ -38,10 +39,10 @@ export function App() {
 
   return (
     <Container>
-      <Router>
-        <Navbar />
-        <RoutesComponent />
-      </Router>
+      <Navbar />
+
+      <Outlet />
+      {/* <RoutesComponent /> */}
     </Container>
   );
 }

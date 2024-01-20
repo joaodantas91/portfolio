@@ -10,6 +10,18 @@ import Chrome from "./img/chrome.svg";
 function Projects () {
   const projects = [
     {
+      href: "https://investor.arlp.com/overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/alliance-resource.png",
+    },
+    {
+      href: "https://ir.signingdaysports.com/overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/signing-day-sports.png",
+    },
+    {
+      href: "https://www.enpro.com/for-investors/investor-overview/default.aspx",
+      src: process.env.PUBLIC_URL + "/img/projects/enpro.png",
+    },
+    {
       href: "https://investors.thecignagroup.com/overview/default.aspx",
       src: process.env.PUBLIC_URL + "/img/projects/cigna.png",
     },

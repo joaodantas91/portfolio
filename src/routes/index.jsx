@@ -4,7 +4,7 @@ import Projects from "../pages/Projects";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-export function RoutesComponent() {
+export function RoutesComponent () {
   const location = useLocation();
   return (
     <AnimatePresence>
